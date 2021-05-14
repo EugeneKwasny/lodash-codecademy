@@ -30,14 +30,9 @@ const _ = {
         }
 
         // If the provided number is within the start and end values, .inRange() will return true
-        if(number>=start && number < end){
-            return true;
-        }
-
         // If the provided number is smaller than the start value, .inRange() will return false
         // If the provided number is larger than or equal to the end value, .inRange() will return false
-        return false;
-
+        return number>=start && number < end;
 
     }
 }
