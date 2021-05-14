@@ -25,14 +25,14 @@ const _ = {
 
 
         // If the provided start value is larger than the provided end value, the two values should be swapped
-        if(start>end){
+        if(start > end){
             [start,end] = [end,start]
         }
 
         // If the provided number is within the start and end values, .inRange() will return true
         // If the provided number is smaller than the start value, .inRange() will return false
         // If the provided number is larger than or equal to the end value, .inRange() will return false
-        return number>=start && number < end;
+        return number >= start && number < end;
 
     }
 }
