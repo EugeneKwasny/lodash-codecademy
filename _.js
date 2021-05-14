@@ -1,5 +1,12 @@
 const _ = {
-    
+    clamp(number, lower, upper){
+        if(number < lower){
+            return lower;
+        }else if(number > upper){
+            return upper;
+        }
+        return  number;
+    }
 }
 
 
