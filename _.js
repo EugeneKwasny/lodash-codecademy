@@ -68,6 +68,18 @@ const _ = {
      */
     has(object, property){
         return object[property] !== undefined;
+    },
+    /**
+     * Swap object properties and its values
+     */
+    invert(object){
+        const invertedOject = {};
+        for(const property in object){
+            invertedOject[object[property]] = property;
+        }
+
+        return invertedOject;
+
     }
 
 }
