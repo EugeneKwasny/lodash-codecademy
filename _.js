@@ -92,6 +92,26 @@ const _ = {
             }
         }
         return undefined;
+    },
+    /**
+     * Creates a slice of array with n elements dropped from the beginning.
+     * @param {*} array 
+     * @param {*} number 
+     * @returns 
+     */
+    drop(array, number=1){
+        // .drop() takes two arguments: an array and a number representing the number 
+        //  of items to drop from the beginning of the array
+        
+        // .drop() returns a new array which contains the elements 
+        //from the original array, excluding the specified number of elements 
+        //from the beginning of the array
+
+
+        // If the number of elements to drop is unspecified, 
+        // your method should drop one element
+
+        return array.slice(number);
     }
 
 }
