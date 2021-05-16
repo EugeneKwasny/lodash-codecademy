@@ -62,6 +62,12 @@ const _ = {
 
         return paddedString;
        
+    },
+    /**
+     * Checks if object has any value at passed key
+     */
+    has(object, property){
+        return object[property] !== undefined;
     }
 
 }
