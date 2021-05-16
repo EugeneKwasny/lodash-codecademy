@@ -80,6 +80,18 @@ const _ = {
 
         return invertedOject;
 
+    },
+    /**
+     * Return object key for that predicate function returns true value 
+     */
+    findKey(object, func){
+        for(const property in object){
+            isTrue = func(object[property])
+            if(isTrue){
+                return property;
+            }
+        }
+        return undefined;
     }
 
 }
