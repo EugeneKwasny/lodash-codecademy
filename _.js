@@ -34,6 +34,12 @@ const _ = {
         // If the provided number is larger than or equal to the end value, .inRange() will return false
         return number >= start && number < end;
 
+    },
+    /**
+     * Splits string into an array of its words.
+     */
+    words(string){
+        return string.split(' ');
     }
 }
 
