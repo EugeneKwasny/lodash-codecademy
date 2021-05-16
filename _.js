@@ -112,6 +112,39 @@ const _ = {
         // your method should drop one element
 
         return array.slice(number);
+    },
+    /**
+     * Creates a slice of array excluding elements dropped from the beginning. 
+     * Elements are dropped until predicate returns falsey. 
+     * The predicate is invoked with three arguments: (value, index, array).
+     * 
+     * @param {*} array 
+     * @param {*} predicate 
+     */
+    dropWhile(array, predicate){
+        const dropNumber = array.findIndex((number, index)=>{
+            return !predicate(number, index, array)
+        });
+
+        const  droppedArray  =  this.drop(array, dropNumber)
+        return droppedArray;
+    },
+    /**
+     * 
+     * Creates an array of elements split into groups the length of size. 
+     * If array can't be split evenly, 
+     * the final chunk will be the remaining elements.
+     * 
+     */
+    chunk(array, sizeOfChunk=1){
+        const arrayChunks = []
+        for(let i=0;i < array.length;i+=sizeOfChunk){
+            const arrayChunk=array.slice(i, i+sizeOfChunk);
+            arrayChunks.push(arrayChunk);
+
+        }
+
+        return arrayChunks;
     }
 
 }
