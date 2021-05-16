@@ -40,7 +40,31 @@ const _ = {
      */
     words(string){
         return string.split(' ');
+    },
+    /**
+     * Pads string with witspaces
+     */
+    pad(string, length){
+        //.pad() takes two arguments: a string and a length
+        //if string.length is equeal to length parameter, then return string arg without modification
+        // .pad() adds spaces evenly to both sides of the string to make it reach the desired length
+        // Extra padding is added to the end of the string if an odd amount of padding is required to reach the specified length
+        // Your method does not need to accept the additional chars parameter; we will only add space characters to pad our string
+
+        if(string.length === length || string.length > length ){
+            return string;
+        }
+        
+        const padLength = length-string.length
+        const padStartSize = Math.floor(padLength / 2)
+        const padEndSize = padLength - padStartSize;
+
+        return  ' '.repeat(padStartSize)
+                + string
+                + ' '.repeat(padEndSize);
+       
     }
+
 }
 
 
